@@ -168,6 +168,10 @@ a
     background: #f8f8f8
     position: relative
 
+  &__item:hover
+    transform: scale(1.1)
+    transition: 0.3s linear
+
   &__img
     background: rgba(58, 56, 56, 0.86)
 
@@ -250,7 +254,7 @@ a
 
     border: 1px solid #ff6a6a
 
-    transition: background 0.1s linear, color 0.1s linear
+    transition: background 0.3s linear, color 0.1s linear
 
   &__btn:hover
     color: #ffffff
@@ -392,5 +396,8 @@ a
   &__icons svg > path
     transition: fill 0.4s ease
 
-  &__icons:hover svg path
+  &__icons:hover svg > path
     fill: #f16d7f
+
+  &__icons:hover svg > g > path
+    fill: white

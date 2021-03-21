@@ -103,217 +103,137 @@ ul.breadcrumb li + li:before
     line-height: 17px
     color: #f16d7f
 
-/*SHOPPING*/
-.shopping
+/*REGISTRATION*/
+.registration
     display: flex
+    margin-top: 64px
+    margin-bottom: 96px
 
-    &__cardbox
-        display: flex
-        flex-direction: column
-        margin-top: 96px
-        margin-bottom: 128px
-
-.cardbox__item
-    display: flex
-    height: 306px
-    width: 652px
-    margin-bottom: 40px
-
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21)
-
-    &__info
-        display: flex
-        flex-direction: column
-
-        margin-top: 22px
-        margin-left: 31px
-        margin-right: 22px
-
-    &__heading
-        display: flex
-
-    &__link
-        text-decoration: none
-        font-style: normal
-        font-weight: normal
-        font-size: 24px
-        line-height: 29px
-
-        color: #222222
-
-    &__link:hover
-        color: #f16d7f
-
-    &__icons
-        margin-left: 51px
-
-    &__icons:hover > path
-        fill: #f16d7f
-
-    &__text
-        margin-top: 42px
-
-    &__text p
-        font-style: normal
-        font-weight: normal
-        font-size: 22px
-        line-height: 26px
-        margin-bottom: 6px
-
-        color: #575757
-
-    &__text__price
-        color: #f16d7f
-
-    &__text__quantity
-        border: 1px solid #333
-        font-style: normal
-        font-weight: normal
-        font-size: 18px
-        line-height: 22px
-        color: #656565
-
-        width: 43px
-        margin-left: 24px
-        padding-left: 15px
-
-.cardbox__button
-    display: flex
-    justify-content: space-between
-
-.cardbox__btn
-    border: 1px solid #a4a4a4
-    padding: 16px 38px
-
-    font-style: normal
-    font-weight: 300
-    font-size: 14px
-    line-height: 17px
-    color: #000000
-
-    &:hover
-        background: #f16d7f
-        color: #ffffff
-
-/*SOPPING__FORMS*/
-
-.shopping__forms
-    margin: 113px 129px
+    &__forms
+        margin-right: 129px
 
 .forms
     width: 360px
 
-    &__heading
+    &__name
         font-style: normal
         font-weight: 300
         font-size: 16px
         line-height: 19px
-
         color: #222222
+        margin-bottom: 10px
 
+    &__radio
+        margin-top: 16px
+
+    &__radio__female
+        margin-left: 20px
+
+    &__login
+        font-style: normal
+        font-weight: 300
+        font-size: 16px
+        line-height: 19px
+        color: #222222
+        margin-top: 34px
         margin-bottom: 10px
 
 input[type="text"]
     width: 100%
     padding: 12px
     border: 1px solid #a4a4a4
+    -webkit-box-sizing: border-box
     box-sizing: border-box
     margin-top: 6px
     margin-bottom: 16px
-
     font-style: normal
     font-weight: 300
     font-size: 13px
     line-height: 16px
     color: #222222
 
-.shopping__forms__btn
-    background: #ffffff
-
+.login__email,
+.login__password
+    width: 100%
+    padding: 12px
+    border: 1px solid #a4a4a4
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    margin-top: 6px
+    margin-bottom: 16px
     font-style: normal
     font-weight: 300
-    font-size: 11px
-    line-height: 13px
+    font-size: 13px
+    line-height: 16px
+    color: #222222
 
-    color: #4a4a4a
+.login__text
+    font-style: normal
+    font-weight: 300
+    font-size: 13px
+    line-height: 16px
 
-    padding: 10px 15px
+    color: #b1b1b1
+
+    margin-bottom: 39px
+
+.shopping__forms__btn
+    background: #f16d7f
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    color: #ffffff
+    padding: 16px 29px
     border: 1px solid #a4a4a4
     cursor: pointer
 
-    &:hover
-        background: #f16d7f
-        color: #ffffff
-
-.checkout
-    display: flex
-    flex-direction: column
-    align-items: center
-    margin-top: 57px
-    width: 360px
-    height: 214px
-    background: #f5f3f3
-
-    &__box
-        width: 273px
-        display: flex
-        flex-direction: column
-        align-items: flex-end
-        box-sizing: border-box
-
-        margin-top: 39px
-
-    &__box__sub
-        font-style: normal
-        font-weight: normal
-        font-size: 11px
-        line-height: 13px
-
-        color: #4a4a4a
-        margin-bottom: 12px
-
-    &__box__sub__span
-        margin-left: 25px
-
-    &__box__grand
-        font-style: normal
-        font-weight: 300
-        font-size: 16px
-        line-height: 19px
-
-        color: #222222
-
-    &__box__grand__span
+    &__icons
         margin-left: 20px
-        color: #f16d7f
-        font-weight: 700
 
-    &__box__hr
-        border: none
-        color: #e2e2e2
-        background: #e2e2e2
-        height: 1px
-        width: 275px
-        margin: 21px 0 17px
-
-    &__box__btn
-        display: block
-        text-decoration: none
-        font-style: normal
-        font-weight: 300
-        font-size: 16px
-        line-height: 19px
-
-        padding: 15px 41px
-        margin-bottom: 42px
-
-        color: #ffffff
-        background: #f16d7f
-
-    &__box__btn:hover
+    &:hover
         background: #ffffff
         color: #f16d7f
-        border: 1px solid #f16d7f
+
+    &:hover svg path
+        fill: #f16d7f
+
+/*REGISTRATION INFO*/
+.registration__info
+    width: 652px
+    height: 334px
+
+    &__heading
+        font-style: normal
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+
+        margin-bottom: 22px
+
+        color: #000000
+
+    &__text
+        font-style: normal
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+
+        margin-bottom: 27px
+
+        color: #000000
+
+    &__list
+        list-style: none
+
+    &__list__link
+        margin-bottom: 16px
+        font-style: normal
+        font-weight: 300
+        font-size: 24px
+        line-height: 29px
+
+        color: #000000
 
 /*INFO*/
 .subscribe

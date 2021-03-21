@@ -121,139 +121,24 @@ ul.breadcrumb li + li:before {
   color: #f16d7f;
 }
 
-/*SHOPPING*/
-.shopping {
+/*REGISTRATION*/
+.registration {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 64px;
+  margin-bottom: 96px;
 }
 
-.shopping__cardbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 96px;
-  margin-bottom: 128px;
-}
-
-.cardbox__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 306px;
-  width: 652px;
-  margin-bottom: 40px;
-  -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-          box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-}
-
-.cardbox__item__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-top: 22px;
-  margin-left: 31px;
-  margin-right: 22px;
-}
-
-.cardbox__item__heading {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.cardbox__item__link {
-  text-decoration: none;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 29px;
-  color: #222222;
-}
-
-.cardbox__item__link:hover {
-  color: #f16d7f;
-}
-
-.cardbox__item__icons {
-  margin-left: 51px;
-}
-
-.cardbox__item__icons:hover > path {
-  fill: #f16d7f;
-}
-
-.cardbox__item__text {
-  margin-top: 42px;
-}
-
-.cardbox__item__text p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 22px;
-  line-height: 26px;
-  margin-bottom: 6px;
-  color: #575757;
-}
-
-.cardbox__item__text__price {
-  color: #f16d7f;
-}
-
-.cardbox__item__text__quantity {
-  border: 1px solid #333;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  color: #656565;
-  width: 43px;
-  margin-left: 24px;
-  padding-left: 15px;
-}
-
-.cardbox__button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.cardbox__btn {
-  border: 1px solid #a4a4a4;
-  padding: 16px 38px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-  color: #000000;
-}
-
-.cardbox__btn:hover {
-  background: #f16d7f;
-  color: #ffffff;
-}
-
-/*SOPPING__FORMS*/
-.shopping__forms {
-  margin: 113px 129px;
+.registration__forms {
+  margin-right: 129px;
 }
 
 .forms {
   width: 360px;
 }
 
-.forms__heading {
+.forms__name {
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -262,12 +147,30 @@ ul.breadcrumb li + li:before {
   margin-bottom: 10px;
 }
 
+.forms__radio {
+  margin-top: 16px;
+}
+
+.forms__radio__female {
+  margin-left: 20px;
+}
+
+.forms__login {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-top: 34px;
+  margin-bottom: 10px;
+}
+
 input[type="text"] {
   width: 100%;
   padding: 12px;
   border: 1px solid #a4a4a4;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   font-style: normal;
@@ -277,110 +180,91 @@ input[type="text"] {
   color: #222222;
 }
 
-.shopping__forms__btn {
-  background: #ffffff;
+.login__email,
+.login__password {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a4a4a4;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
   font-style: normal;
   font-weight: 300;
-  font-size: 11px;
-  line-height: 13px;
-  color: #4a4a4a;
-  padding: 10px 15px;
+  font-size: 13px;
+  line-height: 16px;
+  color: #222222;
+}
+
+.login__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #b1b1b1;
+  margin-bottom: 39px;
+}
+
+.shopping__forms__btn {
+  background: #f16d7f;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  padding: 16px 29px;
   border: 1px solid #a4a4a4;
   cursor: pointer;
 }
 
-.shopping__forms__btn:hover {
-  background: #f16d7f;
-  color: #ffffff;
-}
-
-.checkout {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 57px;
-  width: 360px;
-  height: 214px;
-  background: #f5f3f3;
-}
-
-.checkout__box {
-  width: 273px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-top: 39px;
-}
-
-.checkout__box__sub {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 11px;
-  line-height: 13px;
-  color: #4a4a4a;
-  margin-bottom: 12px;
-}
-
-.checkout__box__sub__span {
-  margin-left: 25px;
-}
-
-.checkout__box__grand {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  color: #222222;
-}
-
-.checkout__box__grand__span {
+.shopping__forms__btn__icons {
   margin-left: 20px;
-  color: #f16d7f;
-  font-weight: 700;
 }
 
-.checkout__box__hr {
-  border: none;
-  color: #e2e2e2;
-  background: #e2e2e2;
-  height: 1px;
-  width: 275px;
-  margin: 21px 0 17px;
-}
-
-.checkout__box__btn {
-  display: block;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 19px;
-  padding: 15px 41px;
-  margin-bottom: 42px;
-  color: #ffffff;
-  background: #f16d7f;
-}
-
-.checkout__box__btn:hover {
+.shopping__forms__btn:hover {
   background: #ffffff;
   color: #f16d7f;
-  border: 1px solid #f16d7f;
+}
+
+.shopping__forms__btn:hover svg path {
+  fill: #f16d7f;
+}
+
+/*REGISTRATION INFO*/
+.registration__info {
+  width: 652px;
+  height: 334px;
+}
+
+.registration__info__heading {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 22px;
+  color: #000000;
+}
+
+.registration__info__text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 27px;
+  color: #000000;
+}
+
+.registration__info__list {
+  list-style: none;
+}
+
+.registration__info__list__link {
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
 }
 
 /*INFO*/
@@ -534,4 +418,4 @@ input[type="text"] {
 .footer__icons:hover svg > g > path {
   fill: white;
 }
-/*# sourceMappingURL=shopping__style.css.map */
+/*# sourceMappingURL=registration__style.css.map */
