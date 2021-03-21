@@ -232,6 +232,13 @@ a {
   position: relative;
 }
 
+.cards__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
 .cards__img {
   background: rgba(58, 56, 56, 0.86);
 }
@@ -328,8 +335,8 @@ a {
   margin: 38px auto;
   padding: 14px 38px;
   border: 1px solid #ff6a6a;
-  -webkit-transition: background 0.1s linear, color 0.1s linear;
-  transition: background 0.1s linear, color 0.1s linear;
+  -webkit-transition: background 0.3s linear, color 0.1s linear;
+  transition: background 0.3s linear, color 0.1s linear;
 }
 
 .cards__btn:hover {
@@ -524,7 +531,11 @@ a {
   transition: fill 0.4s ease;
 }
 
-.footer__icons:hover svg path {
+.footer__icons:hover svg > path {
   fill: #f16d7f;
+}
+
+.footer__icons:hover svg > g > path {
+  fill: white;
 }
 /*# sourceMappingURL=style.css.map */

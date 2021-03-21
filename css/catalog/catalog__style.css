@@ -296,6 +296,13 @@ ul.breadcrumb li + li:before {
   position: relative;
 }
 
+.cards__item:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
 .cards__img {
   background: rgba(58, 56, 56, 0.86);
 }
@@ -607,7 +614,11 @@ ul.breadcrumb li + li:before {
   transition: fill 0.4s ease;
 }
 
-.footer__icons:hover svg path {
+.footer__icons:hover svg > path {
   fill: #f16d7f;
+}
+
+.footer__icons:hover svg > g > path {
+  fill: white;
 }
 /*# sourceMappingURL=catalog__style.css.map */

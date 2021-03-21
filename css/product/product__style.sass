@@ -313,6 +313,10 @@ ul.breadcrumb li + li:before
         background: #f8f8f8
         position: relative
 
+    &__item:hover
+        transform: scale(1.1)
+        transition: 0.3s linear
+
     &__img
         background: rgba(58, 56, 56, 0.86)
 
@@ -514,5 +518,8 @@ ul.breadcrumb li + li:before
         -webkit-transition: fill 0.4s ease
         transition: fill 0.4s ease
 
-    &__icons:hover svg path
+    &__icons:hover svg > path
         fill: #f16d7f
+
+    &__icons:hover svg > g > path
+        fill: white
