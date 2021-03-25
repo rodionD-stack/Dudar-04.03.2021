@@ -482,6 +482,7 @@ ul.breadcrumb li + li:before {
   background: url(../../img/photosubscribe.png);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .sub {
