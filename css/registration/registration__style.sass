@@ -12,6 +12,10 @@ body
 a
     text-decoration: none
 
+.box
+    position: relative
+    overflow: hidden
+
 .center
     padding-left: calc(50% - 570px)
     padding-right: calc(50% - 570px)
@@ -20,37 +24,68 @@ a
 .header
     background: #222222
     height: 75px
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-align: center
-    -ms-flex-align: center
     align-items: center
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
     justify-content: space-between
 
     &__search
         margin-left: 41px
 
-    &__icons:not(:last-child)
-        margin-right: 33px
-
     &__icons
-        -webkit-transition: all 0.4s ease
         transition: all 0.4s ease
         text-decoration: none
+        &:not(:last-child)
+            margin-right: 33px
+        &_mob
+            display: none
 
     &__icons:hover
         color: #f16d7f
 
     &__icons svg > path
-        -webkit-transition: fill 0.4s ease
         transition: fill 0.4s ease
 
     &__icons:hover svg path
         fill: #f16d7f
 
+/*BURGER*/
+.nav
+    background-color: #fff
+    padding: 16px 16px 32px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    width: 232px
+    box-sizing: border-box
+    transition: right .3s
+
+    &__catalog
+        list-style: none
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #F16D7F
+
+    &__items
+        list-style: none
+        padding: 12px 20px 20px
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+            margin-bottom: 11px
+#switcher
+    display: none
+
+    &:checked ~ .nav
+        right: -232px
+
+.switcher__icons
+    margin-left: 170px
 /*NAV__PAGE*/
 .nav__page
     display: -webkit-box
@@ -109,7 +144,7 @@ ul.breadcrumb li + li:before
     margin-top: 64px
     margin-bottom: 96px
 
-    &__forms
+    &__area
         margin-right: 129px
 
 .forms
@@ -242,31 +277,16 @@ input[type="text"]
     background-position: center
     background-repeat: no-repeat
     background-size: cover
-
-.sub
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-align: center
-    -ms-flex-align: center
-    align-items: center
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
-    justify-content: space-between
-    padding-top: 100px
+    flex-wrap: wrap
+    justify-content: center
 
     &__info
         width: 360px
-        display: -webkit-box
-        display: -ms-flexbox
         display: flex
-        -webkit-box-orient: vertical
-        -webkit-box-direction: normal
-        -ms-flex-direction: column
         flex-direction: column
-        -webkit-box-align: center
-        -ms-flex-align: center
         align-items: center
+        justify-content: center
 
     &__img
         display: block
@@ -280,24 +300,17 @@ input[type="text"]
         font-size: 20px
         line-height: 24px
         text-align: center
+
         color: #222224
 
     &__form
         width: 557px
-        display: -webkit-box
-        display: -ms-flexbox
         display: flex
-        -webkit-box-orient: vertical
-        -webkit-box-direction: normal
-        -ms-flex-direction: column
         flex-direction: column
-        -webkit-box-align: center
-        -ms-flex-align: center
         align-items: center
+        justify-content: center
 
     &__forms
-        display: -webkit-box
-        display: -ms-flexbox
         display: flex
 
     &__heading
@@ -305,8 +318,10 @@ input[type="text"]
         font-weight: normal
         font-size: 24px
         line-height: 167.2%
+
         text-align: center
         margin-bottom: 27px
+
         color: #222224
 
     &__heading_select
@@ -329,6 +344,7 @@ input[type="text"]
         border-radius: 0 30px 30px 0
         border: none
         color: #e1e1e1
+        cursor: pointer
 
 /*FOOTER*/
 .footer
@@ -369,3 +385,56 @@ input[type="text"]
 
     &__icons:hover svg > g > path
         fill: white
+
+/*MEDIA*/
+@media (max-width: 1023px)
+    .center
+        padding-left: calc(50% - 368px)
+        padding-right: calc(50% - 368px)
+
+        .opt
+            flex-direction: column
+            align-items: center
+            row-gap: 48px
+            padding-top: 48px
+            padding-bottom: 64px
+
+@media (max-width: 767px)
+    .center
+        padding-left: calc(50% - 212px)
+        padding-right: calc(50% - 212px)
+
+        .header
+            &__icons
+                &:not(:last-child)
+                    margin-right: 8px
+                &_desc
+                    display: none
+                &_mob
+                    display: block
+
+        .nav
+            width: 100%
+            top: 0
+            height: 100vh
+
+            &__links-menu
+                display: flex
+                justify-content: center
+
+        #switcher:checked ~ .nav
+            right: -100%
+        &__heading
+            font-size: 16px
+            line-height: 19px
+        &__text
+            font-size: 16px
+            line-height: 19px
+    .opt
+        padding-left: 14px
+        padding-right: 14px
+
+@media ( max-width: 425px )
+    .center
+        padding-left: 8px
+        padding-right: 8px

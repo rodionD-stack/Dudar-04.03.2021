@@ -11,6 +11,10 @@ body
 a
   text-decoration: none
 
+.box
+  position: relative
+  overflow: hidden
+
 .center
   padding-left: calc(50% - 570px)
   padding-right: calc(50% - 570px)
@@ -27,12 +31,13 @@ a
   &__search
     margin-left: 41px
 
-  &__icons:not(:last-child)
-    margin-right: 33px
-
   &__icons
     transition: all 0.4s ease
     text-decoration: none
+    &:not(:last-child)
+      margin-right: 33px
+    &_mob
+      display: none
 
   &__icons:hover
     color: #f16d7f
@@ -43,6 +48,44 @@ a
   &__icons:hover svg path
     fill: #f16d7f
 
+/*BURGER*/
+.nav
+  background-color: #fff
+  padding: 16px 16px 32px 32px
+  position: absolute
+  top: 75px
+  right: 0
+  width: 232px
+  box-sizing: border-box
+  transition: right .3s
+
+  &__catalog
+    list-style: none
+    a
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: #F16D7F
+
+  &__items
+    list-style: none
+    padding: 12px 20px 20px
+    a
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+      color: #6F6E6E
+      margin-bottom: 11px
+#switcher
+  display: none
+
+  &:checked ~ .nav
+    right: -232px
+
+.switcher__icons
+  margin-left: 170px
 /*PROMO*/
 
 .promo
@@ -249,7 +292,7 @@ a
     color: #f26376
     text-decoration: none
 
-    margin: 38px auto
+    margin: 38px 0 96px
     padding: 14px 38px
 
     border: 1px solid #ff6a6a
@@ -259,19 +302,27 @@ a
   &__btn:hover
     color: #ffffff
     background: #f16d7f
+.btn
+  display: flex
+  justify-content: center
 
 /*OPTIONS*/
 .options
   background: #222224
 
 .opt
+  padding-top: 104px
+  padding-bottom: 104px
   display: flex
-  height: 340px
-  align-items: center
+  gap: 20px
 
   &__item
-    flex: 1 1 0
-    text-align: center
+    width: 360px
+
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
   &__heading
     font-style: normal
@@ -301,18 +352,16 @@ a
   background-position: center
   background-repeat: no-repeat
   background-size: cover
-
-.sub
   display: flex
-  align-items: center
-  justify-content: space-between
-  padding-top: 100px
+  flex-wrap: wrap
+  justify-content: center
 
   &__info
     width: 360px
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: center
 
   &__img
     display: block
@@ -334,6 +383,7 @@ a
     display: flex
     flex-direction: column
     align-items: center
+    justify-content: center
 
   &__forms
     display: flex
@@ -402,3 +452,94 @@ a
 
   &__icons:hover svg > g > path
     fill: white
+
+  /*MEDIA*/
+@media (max-width: 1023px)
+  .center
+    padding-left: calc(50% - 368px)
+    padding-right: calc(50% - 368px)
+
+    .promo
+      &__h1
+        font-size: 37px
+        line-height: 44px
+        &__h2
+          font-size: 24px
+          line-height: 28px
+
+    .sale
+      &__top
+        gap: 20px
+        &__item
+          height: 167px
+
+        &__bottom
+          height: 116px
+
+    .cards
+      gap: 16px
+
+    .opt
+      flex-direction: column
+      align-items: center
+      row-gap: 48px
+      padding-top: 48px
+      padding-bottom: 64px
+
+@media (max-width: 767px)
+  .center
+    padding-left: calc(50% - 212px)
+    padding-right: calc(50% - 212px)
+
+    .header
+      &__icons
+        &:not(:last-child)
+          margin-right: 8px
+        &_desc
+          display: none
+        &_mob
+          display: block
+
+    .nav
+      width: 100%
+      top: 0
+      height: 100vh
+
+      &__links-menu
+        display: flex
+        justify-content: center
+
+    #switcher:checked ~ .nav
+      right: -100%
+
+    .promo
+      height: 363px
+      display: flex
+      justify-content: center
+      &__text
+        display: flex
+        align-items: center
+        justify-content: center
+        padding-top: 0
+      &__img
+        display: none
+
+    .sale
+      padding-bottom: 64px
+      &__top
+        flex-direction: column
+        row-gap: 32px
+      &__item
+        height: 247px
+      &__bottom
+        height: 111px
+        margin-top: 32px
+
+    .opt
+      padding-left: 14px
+      padding-right: 14px
+
+@media ( max-width: 425px )
+  .center
+    padding-left: 8px
+    padding-right: 8px
