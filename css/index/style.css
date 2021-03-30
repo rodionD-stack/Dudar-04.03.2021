@@ -44,6 +44,19 @@ a {
   margin-left: 41px;
 }
 
+.header__search:hover {
+  olor: #f16d7f;
+}
+
+.header__search svg > path {
+  -webkit-transition: fill 0.4s ease;
+  transition: fill 0.4s ease;
+}
+
+.header__search:hover svg path {
+  fill: #f16d7f;
+}
+
 .header__icons {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;

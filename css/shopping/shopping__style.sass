@@ -33,6 +33,15 @@ a
     &__search
         margin-left: 41px
 
+    &__search:hover
+        color: #f16d7f
+
+    &__search svg > path
+        transition: fill 0.4s ease
+
+    &__search:hover svg path
+        fill: #f16d7f
+
     &__icons:not(:last-child)
         margin-right: 33px
 
@@ -50,6 +59,44 @@ a
 
     &__icons:hover svg path
         fill: #f16d7f
+
+/*BURGER*/
+.nav
+    background-color: #fff
+    padding: 16px 16px 32px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    width: 232px
+    box-sizing: border-box
+    transition: right .3s
+
+    &__catalog
+        list-style: none
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #F16D7F
+
+    &__items
+        list-style: none
+        padding: 12px 20px 20px
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+            margin-bottom: 11px
+#switcher
+    display: none
+    &:checked ~ .nav
+        right: -232px
+
+.switcher__icons
+    margin-left: 170px
 
 /*NAV__PAGE*/
 .nav__page
