@@ -12,44 +12,89 @@ body
 a
     text-decoration: none
 
+.box
+    position: relative
+    overflow: hidden
+
 .center
     padding-left: calc(50% - 570px)
     padding-right: calc(50% - 570px)
 
 /*HEADER*/
+
 .header
     background: #222222
     height: 75px
-    display: -webkit-box
-    display: -ms-flexbox
     display: flex
-    -webkit-box-align: center
-    -ms-flex-align: center
     align-items: center
-    -webkit-box-pack: justify
-    -ms-flex-pack: justify
     justify-content: space-between
 
     &__search
         margin-left: 41px
 
-    &__icons:not(:last-child)
-        margin-right: 33px
+    &__search:hover
+        olor: #f16d7f
+
+    &__search svg > path
+        transition: fill 0.4s ease
+
+    &__search:hover svg path
+        fill: #f16d7f
 
     &__icons
-        -webkit-transition: all 0.4s ease
         transition: all 0.4s ease
         text-decoration: none
+        &:not(:last-child)
+            margin-right: 33px
+        &_mob
+            display: none
 
     &__icons:hover
         color: #f16d7f
 
     &__icons svg > path
-        -webkit-transition: fill 0.4s ease
         transition: fill 0.4s ease
 
     &__icons:hover svg path
         fill: #f16d7f
+
+/*BURGER*/
+.nav
+    background-color: #fff
+    padding: 16px 16px 32px 32px
+    position: absolute
+    top: 75px
+    right: 0
+    width: 232px
+    box-sizing: border-box
+    transition: right .3s
+
+    &__catalog
+        list-style: none
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #F16D7F
+
+    &__items
+        list-style: none
+        padding: 12px 20px 20px
+        a
+            font-style: normal
+            font-weight: normal
+            font-size: 14px
+            line-height: 17px
+            color: #6F6E6E
+            margin-bottom: 11px
+#switcher
+    display: none
+    &:checked ~ .nav
+        right: -232px
+
+.switcher__icons
+    margin-left: 170px
 
 /*NAV__PAGE*/
 .nav__page
